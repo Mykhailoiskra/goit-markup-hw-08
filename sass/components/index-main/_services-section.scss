@@ -1,0 +1,48 @@
+.services {
+  display: none;
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.services .title {
+  @extend %section-title;
+}
+
+.examples {
+  @extend %list;
+  @include flex;
+  flex-wrap: wrap;
+}
+
+.examples .item {
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+}
+
+.examples .item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.examples .box {
+  position: relative;
+}
+
+.examples .link {
+  position: absolute;
+  bottom: 0;
+
+  display: inline-block;
+  width: 100%;
+  padding-top: 27px;
+  padding-bottom: 27px;
+
+  color: #fff;
+  background: rgba(47, 48, 58, 0.8);
+  text-decoration: none;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  text-align: center;
+}
