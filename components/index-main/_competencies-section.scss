@@ -1,0 +1,43 @@
+.competencies {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  border-bottom: 1px solid #ececec;
+}
+
+.competencies-list {
+  @include flex;
+  @extend %list;
+}
+
+.competencies-list .item {
+  width: 270px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+.competencies-list .icon-wrapper {
+  @include flex(inline-flex);
+  width: 270px;
+  height: 120px;
+  margin-bottom: 30px;
+  background-color: $secondaryBgColor;
+  border-radius: 4px;
+}
+
+.competencies-list .title {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  color: $mainHeadingColor;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+.competencies-list .description {
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+}

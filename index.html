@@ -15,12 +15,35 @@
     <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <header>
-      <div class="container">
-        <nav class="header-nav">
-          <a class="logo-header" href="./index.html" lang="en"
-            ><span>Web</span> Studio</a
+    <header class="container">
+      <nav class="header-nav">
+        <a class="logo-header" href="./index.html" lang="en"
+          ><span>Web</span> Studio</a
+        >
+        <button
+          type="button"
+          class="menu-button"
+          aria-expanded="false"
+          aria-controls="menu-container"
+          data-menu-button
+        >
+          <svg
+            class="button-icon"
+            width="40"
+            height="40"
+            aria-label="Переключатель мобильного меню"
           >
+            <use
+              class="icon-cross"
+              href="./images/sprite.svg#icon-menu-close"
+            ></use>
+            <use
+              class="icon-menu"
+              href="./images/sprite.svg#icon-menu-burger"
+            ></use>
+          </svg>
+        </button>
+        <div class="menu-container" data-menu>
           <ul class="site-nav list">
             <li class="item">
               <a class="link current" href="./index.html">Студия</a>
@@ -45,8 +68,8 @@
               +38 096 111 11 11</a
             >
           </address>
-        </nav>
-      </div>
+        </div>
+      </nav>
     </header>
     <main>
       <!-- Секция-герой-->
@@ -490,6 +513,7 @@
         <button class="form-button" type="submit">Отправить</button>
       </form>
     </div>
+    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
