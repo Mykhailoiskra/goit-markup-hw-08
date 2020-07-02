@@ -1,0 +1,87 @@
+.team-section {
+  background-color: $secondaryBgColor;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.section-title {
+  @extend %section-title;
+}
+
+.team-list {
+  @extend %list;
+}
+
+.team-list .card {
+  width: 100%;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+.team-list .wrapper {
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 24px;
+  padding-top: 30px;
+
+  background-color: $mainBgColor;
+  text-align: center;
+}
+
+.team-list .title {
+  color: $mainHeadingColor;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.team-list p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+.team-links {
+  @include flex;
+  @extend %list;
+}
+.team-links .element:not(:last-child) {
+  margin-right: 10px;
+}
+
+.team-links a {
+  @include flex(inline-flex);
+  width: 44px;
+  height: 44px;
+
+  text-decoration: none;
+  color: inherit;
+
+  border-radius: 50px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    background-color: $accentColor;
+  }
+}
+
+.social-network-icon {
+  height: 20px;
+  width: 20px;
+  fill: #afb1b8;
+
+  .team-links a:hover &,
+  .team-links a:focus & {
+    fill: #ffffff;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
