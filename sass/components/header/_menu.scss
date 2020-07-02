@@ -33,6 +33,7 @@
 }
 .menu-container {
   background-color: #fff;
+  z-index: 2;
 }
 .site-nav {
   @extend %list;
