@@ -13,12 +13,8 @@
 }
 
 .team-list .card {
-  width: 100%;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
-  &:not(:last-child) {
-    margin-bottom: 30px;
-  }
 }
 
 .team-list .wrapper {
@@ -83,5 +79,26 @@
   .team-links a:focus & {
     fill: #ffffff;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .team-list .card {
+    width: 100%;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}
+@media screen and (min-width: $tablet) {
+  .team-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+
+  .team-list .card {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
   }
 }

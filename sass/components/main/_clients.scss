@@ -41,3 +41,9 @@
 .client-icon {
   fill: #afb1b8;
 }
+
+@media screen and (min-width: $tablet) {
+  .clients .item {
+    flex-basis: calc((100% - 6 * 15px) / 3);
+  }
+}

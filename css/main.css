@@ -82,18 +82,20 @@ body {
   letter-spacing: 0.03em;
 }
 
+.page-header {
+  position: relative;
+}
+
 .header-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
-  height: 60px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .menu-button {
@@ -136,7 +138,6 @@ body {
 
 .menu-container {
   background-color: #fff;
-  z-index: 2;
 }
 
 .site-nav .link {
@@ -204,6 +205,7 @@ body {
     top: 100%;
     left: 0;
     width: 100%;
+    z-index: 2;
     padding-top: 60px;
     padding-bottom: 60px;
     text-align: center;
@@ -227,6 +229,54 @@ body {
   }
   .contact-link:first-child {
     margin-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .site-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-flex: 2;
+        -ms-flex-positive: 2;
+            flex-grow: 2;
+  }
+  .site-nav .item:not(:last-child) {
+    margin-right: 50px;
+  }
+  .site-nav .link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+  .nav-address {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contact-link:first-child {
+    margin-bottom: 10px;
   }
 }
 
@@ -273,6 +323,12 @@ body {
 .hero .button {
   padding-left: 32px;
   padding-right: 32px;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    max-width: 768px;
+  }
 }
 
 .competencies {
@@ -322,6 +378,21 @@ body {
   line-height: 1.7;
 }
 
+@media screen and (min-width: 768px) {
+  .competencies-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: -15px;
+  }
+  .competencies-list .item {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+}
+
 .services {
   display: none;
 }
@@ -333,13 +404,8 @@ body {
 }
 
 .team-list .card {
-  width: 100%;
   -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
           box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
-}
-
-.team-list .card:not(:last-child) {
-  margin-bottom: 30px;
 }
 
 .team-list .wrapper {
@@ -420,6 +486,30 @@ body {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+@media screen and (max-width: 767px) {
+  .team-list .card {
+    width: 100%;
+  }
+  .team-list .card:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .team-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: -15px;
+  }
+  .team-list .card {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+}
+
 .clients-section {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -476,6 +566,13 @@ body {
 
 .client-icon {
   fill: #afb1b8;
+}
+
+@media screen and (min-width: 768px) {
+  .clients .item {
+    -ms-flex-preferred-size: calc((100% - 6 * 15px) / 3);
+        flex-basis: calc((100% - 6 * 15px) / 3);
+  }
 }
 
 footer {
@@ -678,6 +775,37 @@ footer {
   margin-left: 10px;
 }
 
+@media screen and (min-width: 768px) {
+  .footer-thumb {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  .join-title {
+    margin-top: 0;
+  }
+  .join-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .join-input {
+    width: 450px;
+  }
+}
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -720,7 +848,7 @@ footer {
 @media screen and (min-width: 768px) {
   .feedback-form {
     position: absolute;
-    top: 208px;
+    top: 200px;
     left: 50%;
     -webkit-transform: translate(-50%, 0);
             transform: translate(-50%, 0);

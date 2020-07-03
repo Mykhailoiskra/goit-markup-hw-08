@@ -154,3 +154,25 @@ footer {
   fill: #ffffff;
   margin-left: 10px;
 }
+
+@media screen and (min-width: $tablet) {
+  .footer-thumb {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+  }
+
+  .join-title {
+    margin-top: 0;
+  }
+
+  .join-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .join-input {
+    width: 450px;
+  }
+}

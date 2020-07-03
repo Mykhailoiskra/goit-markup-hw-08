@@ -41,3 +41,16 @@
   font-size: 14px;
   line-height: 1.7;
 }
+
+@media screen and (min-width: $tablet) {
+  .competencies-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+
+  .competencies-list .item {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+}
