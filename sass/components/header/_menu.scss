@@ -155,8 +155,32 @@
     flex-direction: column;
     justify-content: center;
   }
+  @media screen and (max-width: 1199px) {
+    .contact-link:first-child {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .nav-address {
+    flex-direction: row;
+    align-items: center;
+  }
 
   .contact-link:first-child {
-    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+
+  .menu-container {
+    justify-content: space-between;
+  }
+
+  .site-nav {
+    flex-grow: 0;
+  }
+
+  .logo-header {
+    margin-right: 85px;
   }
 }

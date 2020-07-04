@@ -278,8 +278,39 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
   }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .contact-link:first-child {
     margin-bottom: 10px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .nav-address {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contact-link:first-child {
+    margin-right: 10px;
+  }
+  .menu-container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .site-nav {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+  }
+  .logo-header {
+    margin-right: 85px;
   }
 }
 
@@ -438,14 +469,30 @@ body {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    border-top: 1px solid #ececec;
+  }
+  .filter-menu {
+    margin-bottom: 60px;
+  }
+  .products .item {
+    width: calc((100% - 6 * 15px) / 3);
+  }
+}
+
 footer {
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-.main-wrapper {
-  text-align: center;
+@media screen and (max-width: 1199px) {
+  .main-wrapper {
+    text-align: center;
+  }
 }
 
 .logo-footer {
@@ -551,9 +598,11 @@ footer {
   fill: #ffffff;
 }
 
-.join-form {
-  margin-top: 60px;
-  text-align: center;
+@media screen and (max-width: 1199px) {
+  .join-form {
+    text-align: center;
+    margin-top: 60px;
+  }
 }
 
 .join-text {
@@ -666,6 +715,43 @@ footer {
   }
   .join-input {
     width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .contacts-wrapper {
+    margin-right: 70px;
+  }
+  .footer-thumb {
+    margin-right: 94px;
+  }
+  .join-form {
+    margin-top: 0;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .join-input {
+    width: 358px;
+  }
+  .join-form button {
+    margin-left: 12px;
+    margin-top: 0;
   }
 }
 /*# sourceMappingURL=portfolio.css.map */

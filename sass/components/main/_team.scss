@@ -102,3 +102,13 @@
     margin: 15px;
   }
 }
+
+@media screen and (min-width: $desktop) {
+  .team-list .card {
+    width: calc((100% - 8 * 15px) / 4);
+  }
+  .team-section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}

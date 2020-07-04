@@ -5,7 +5,9 @@ footer {
 }
 
 .main-wrapper {
-  text-align: center;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 .logo-footer {
@@ -102,8 +104,10 @@ footer {
 }
 
 .join-form {
-  margin-top: 60px;
-  text-align: center;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+    margin-top: 60px;
+  }
 }
 
 .join-text {
@@ -174,5 +178,35 @@ footer {
 
   .join-input {
     width: 450px;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .main-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .contacts-wrapper {
+    margin-right: 70px;
+  }
+
+  .footer-thumb {
+    margin-right: 94px;
+  }
+
+  .join-form {
+    margin-top: 0;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  .join-input {
+    width: 358px;
+  }
+  .join-form button {
+    margin-left: 12px;
+    margin-top: 0;
   }
 }

@@ -31,7 +31,10 @@
   font-size: 14px;
   line-height: 1.1;
   text-transform: uppercase;
-  text-align: center;
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
 }
 
 .competencies-list .description {
@@ -52,5 +55,11 @@
   .competencies-list .item {
     width: calc((100% - 4 * 15px) / 2);
     margin: 15px;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .competencies-list .item {
+    width: calc((100% - 8 * 15px) / 4);
   }
 }
