@@ -68,6 +68,8 @@
   padding: 20px 24px 20px 24px;
   border-bottom-right-radius: 5px;
   border-bottom-left-radius: 5px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .product-name {
