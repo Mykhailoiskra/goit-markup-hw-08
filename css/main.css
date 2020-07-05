@@ -1209,7 +1209,13 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-bottom: 30px;
+}
+
+.checkbox-text {
   font-family: Roboto;
   font-weight: 400;
   font-size: 12px;
@@ -1219,14 +1225,13 @@ footer {
 }
 
 @media screen and (min-width: 1200px) {
-  .checkbox-field {
+  .checkbox-text {
     font-size: 14px;
   }
 }
 
 .checkbox-field a {
   color: #2196f3;
-  margin-left: 4px;
 }
 
 .checkbox {
@@ -1242,7 +1247,6 @@ footer {
   height: 15px;
   border: 2px solid #212121;
   border-radius: 4px;
-  margin-right: 8px;
 }
 
 .checkbox:checked + .custom-icon {

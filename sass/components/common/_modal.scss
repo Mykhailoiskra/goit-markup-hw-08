@@ -175,8 +175,11 @@
 
 .checkbox-field {
   @include flex;
+  justify-content: space-between;
   margin-bottom: 30px;
+}
 
+.checkbox-text {
   font-family: Roboto;
   font-weight: 400;
   font-size: 12px;
@@ -191,7 +194,7 @@
 
 .checkbox-field a {
   color: $accentColor;
-  margin-left: 4px;
+  // margin-left: 4px;
 }
 
 .checkbox {
@@ -207,7 +210,7 @@
   height: 15px;
   border: 2px solid $mainHeadingColor;
   border-radius: 4px;
-  margin-right: 8px;
+  // margin-right: 8px;
 }
 
 .checkbox:checked + .custom-icon {
